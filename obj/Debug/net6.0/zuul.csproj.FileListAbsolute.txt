@@ -13,3 +13,18 @@ C:\Users\Rowan\Documents\lesmateriaal\2022-2023\1ejaars\2-Serious App\TTS Rik Te
 C:\Users\Rowan\Documents\lesmateriaal\2022-2023\1ejaars\2-Serious App\TTS Rik TextAdvanture\zuul\obj\Debug\net6.0\zuul.pdb
 C:\Users\Rowan\Documents\lesmateriaal\2022-2023\1ejaars\2-Serious App\TTS Rik TextAdvanture\zuul\obj\Debug\net6.0\zuul.genruntimeconfig.cache
 C:\Users\Rowan\Documents\lesmateriaal\2022-2023\1ejaars\2-Serious App\TTS Rik TextAdvanture\zuul\obj\Debug\net6.0\ref\zuul.dll
+C:\Users\Rowan\Documents\Github1\TextAdventure\bin\Debug\net6.0\zuul.exe
+C:\Users\Rowan\Documents\Github1\TextAdventure\bin\Debug\net6.0\zuul.deps.json
+C:\Users\Rowan\Documents\Github1\TextAdventure\bin\Debug\net6.0\zuul.runtimeconfig.json
+C:\Users\Rowan\Documents\Github1\TextAdventure\bin\Debug\net6.0\zuul.dll
+C:\Users\Rowan\Documents\Github1\TextAdventure\bin\Debug\net6.0\zuul.pdb
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.csproj.AssemblyReference.cache
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.AssemblyInfoInputs.cache
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.AssemblyInfo.cs
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.csproj.CoreCompileInputs.cache
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.dll
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\refint\zuul.dll
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.pdb
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\zuul.genruntimeconfig.cache
+C:\Users\Rowan\Documents\Github1\TextAdventure\obj\Debug\net6.0\ref\zuul.dll
