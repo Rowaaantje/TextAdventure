@@ -3,20 +3,18 @@
 namespace Zuul
 {
 	public class Game
-	{	
+	{
 		private Player player;
-
 		private Parser parser;
 
 		public Game()
 		{
 			parser = new Parser();
 			player = new Player();
-            CreateRooms();
+			CreateRooms();
+		}
 
-        }
-
-        private void CreateRooms()
+		private void CreateRooms()
 		{
 			// create the rooms
 			Room outside = new Room("outside the main entrance of the university");
@@ -30,16 +28,16 @@ namespace Zuul
 
 
 
-            // initialise room exits
-            outside.AddExit("east", theatre);
+			// initialise room exits
+			outside.AddExit("east", theatre);
 			outside.AddExit("south", lab);
 			outside.AddExit("west", pub);
 
 			theatre.AddExit("west", outside);
-            theatre.AddExit("up", theatreloft);
+			theatre.AddExit("up", theatreloft);
 
 
-            pub.AddExit("east", outside);
+			pub.AddExit("east", outside);
 			pub.AddExit("down", winecellar);
 
 			lab.AddExit("north", outside);
@@ -47,18 +45,23 @@ namespace Zuul
 
 			office.AddExit("west", lab);
 
-            theatreloft.AddExit("down", theatre);
-            winecellar.AddExit("up", pub);
+			theatreloft.AddExit("down", theatre);
+			winecellar.AddExit("up", pub);
 
 
 
-            player.CurrentRoom = outside;  // start game outside
-        }
+			player.CurrentRoom = outside;  // start game outside
 
-        /**
+			//Items
+			lab.Chest.Put("medkit", new Item(40, "a huge medkit"));
+			theatreloft.Chest.Put("rathead", new Item(100, "very squishy and sticky of blood"));
+
+		}
+
+		/**
 		 *  Main play routine.  Loops until end of play.
 		 */
-        public void Play()
+		public void Play()
 		{
 			PrintWelcome();
 
@@ -72,11 +75,11 @@ namespace Zuul
 				if (!player.IsAlive())
 				{
 
-					Console.WriteLine("\nyou died\n");
+					Console.WriteLine("\nyou died a horrible death\n");
 					return;
-					continue;
+					//continue;
 				}
-				
+
 
 				Command command = parser.GetCommand();
 				finished = ProcessCommand(command);
@@ -106,11 +109,16 @@ namespace Zuul
 		{
 			bool wantToQuit = false;
 
-			if(command.IsUnknown())
+			if (command.IsUnknown())
 			{
 				Console.WriteLine("I don't know what you mean...");
+
 				return false;
 			}
+
+
+
+
 
 			string commandWord = command.GetCommandWord();
 			switch (commandWord)
@@ -123,6 +131,13 @@ namespace Zuul
 					break;
 				case "look":
 					Console.WriteLine(player.CurrentRoom.GetLongDescription());
+					Console.WriteLine(player.CurrentRoom.GetChestString()); //shows Room pickable objects
+					break;
+				case "take": //Take a object
+					Take(command);
+					break;
+				case "inventory": //shows Player inventory
+					Console.WriteLine(player.PlayerInventory.Show());
 					break;
 				case "quit":
 					wantToQuit = true;
@@ -153,7 +168,7 @@ namespace Zuul
 		 */
 		private void GoRoom(Command command)
 		{
-			if(!command.HasSecondWord())
+			if (!command.HasSecondWord())
 			{
 				// if there is no second word, we don't know where to go...
 				Console.WriteLine("Go where?");
@@ -167,7 +182,7 @@ namespace Zuul
 
 			if (nextRoom == null)
 			{
-				Console.WriteLine("There is no door to "+direction+"!");
+				Console.WriteLine("There is no door to " + direction + "!");
 			}
 			else
 			{
@@ -175,7 +190,34 @@ namespace Zuul
 				player.Damage(10);
 				Console.WriteLine(player.CurrentRoom.GetLongDescription());
 				Console.WriteLine("your current Health is " + player.Health);
+
+				if (player.IsAlive())
+				{
+					Console.WriteLine("Your slowly bleeding to death");
+				}
 			}
+		}
+		private void Take(Command command)
+		{
+			if (!command.HasSecondWord())
+			{
+                Console.WriteLine(" Take what? ");
+                return;
+            }
+			
+            string itemName = command.GetSecondWord();
+            player.TakeFromChest(itemName);
+        }
+			
+		private void drop (Command command)
+		{
+			if(!command.HasSecondWord())
+			{
+				Console.WriteLine("drop what? ");
+				return;
+			}
+			string itemName = command.GetSecondWord();
+			player.DropToChest(itemName);
 		}
 
 	}

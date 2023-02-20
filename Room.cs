@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Zuul
 {
@@ -6,16 +8,25 @@ namespace Zuul
 	{
 		private string description;
 		private Dictionary<string, Room> exits; // stores exits of this room.
+		private Inventory chest;
 
-		/**
+        /**
 		 * Create a room described "description". Initially, it has no exits.
 		 * "description" is something like "in a kitchen" or "in an open court
 		 * yard".
 		 */
-		public Room(string desc)
+
+
+        public Inventory Chest
+        {
+            get { return chest; } 
+        }
+
+        public Room(string desc)
 		{
 			description = desc;
 			exits = new Dictionary<string, Room>();
+			chest = new Inventory(99999999);
 		}
 
 		/**
@@ -35,12 +46,25 @@ namespace Zuul
 			return description;
 		}
 
-		/**
+		public string GetChestString()
+		{
+			string str = "";
+			if (chest.IsEmpty())
+			{
+				str += "The chest is empty. ";
+				return str;
+			}
+			str += " These items are in the chest:\n";
+			str += chest.Show();
+			return str;
+        }
+
+        /**
 		 * Return a long description of this room, in the form:
 		 *     You are in the kitchen.
 		 *     Exits: north, west
 		 */
-		public string GetLongDescription()
+        public string GetLongDescription()
 		{
 			string str = "You are ";
 			str += description;

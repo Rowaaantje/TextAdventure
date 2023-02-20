@@ -18,8 +18,12 @@ namespace Zuul
 			validCommands.Add("quit");
 			validCommands.Add("help");
 			validCommands.Add("look");
+            validCommands.Add("take");
+            validCommands.Add("inventory");
 
-		}
+            
+
+        }
 
 		/**
 		 * Check whether a given string is a valid command word.

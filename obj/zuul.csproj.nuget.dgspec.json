@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rowan\\Documents\\Github1\\TextAdventure\\zuul.csproj": {}
+    "C:\\Users\\Rowan\\Documents\\lesmateriaal\\2022-2023\\1ejaars\\Periode 2\\2-Serious App\\TTS Rik TextAdvanture\\zuul\\zuul.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rowan\\Documents\\Github1\\TextAdventure\\zuul.csproj": {
+    "C:\\Users\\Rowan\\Documents\\lesmateriaal\\2022-2023\\1ejaars\\Periode 2\\2-Serious App\\TTS Rik TextAdvanture\\zuul\\zuul.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rowan\\Documents\\Github1\\TextAdventure\\zuul.csproj",
+        "projectUniqueName": "C:\\Users\\Rowan\\Documents\\lesmateriaal\\2022-2023\\1ejaars\\Periode 2\\2-Serious App\\TTS Rik TextAdvanture\\zuul\\zuul.csproj",
         "projectName": "zuul",
-        "projectPath": "C:\\Users\\Rowan\\Documents\\Github1\\TextAdventure\\zuul.csproj",
+        "projectPath": "C:\\Users\\Rowan\\Documents\\lesmateriaal\\2022-2023\\1ejaars\\Periode 2\\2-Serious App\\TTS Rik TextAdvanture\\zuul\\zuul.csproj",
         "packagesPath": "C:\\Users\\Rowan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rowan\\Documents\\Github1\\TextAdventure\\obj\\",
+        "outputPath": "C:\\Users\\Rowan\\Documents\\lesmateriaal\\2022-2023\\1ejaars\\Periode 2\\2-Serious App\\TTS Rik TextAdvanture\\zuul\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rowan\\AppData\\Roaming\\NuGet\\NuGet.Config",
